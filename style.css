@@ -1,0 +1,347 @@
+body {
+    font-family: sans-serif;
+}
+.sidebar{
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 998;
+	display: flex;
+	flex-direction: column;
+	width: 38px;
+	background: #0a466a;
+	transition: max-width 0.3s, transform 0.3s ease-out;
+	will-change: max-width;
+	height: 100vh;
+	background: #0a466a;
+	transition: all 0.2s ease-in-out;
+	box-shadow: 3px 3px 8px 0 rgba(0,0,0,0.2), 0 3px 5px 0 rgba(0,0,0,0.19);
+}
+.sidebar .sidebar-header {
+    position: relative;
+	height: 30px;
+    box-sizing: border-box;
+    display: flex;
+    margin: 5px 2px 0;
+    padding: 2px;
+    overflow: hidden;
+    justify-content: space-between; 
+	background:url('../interface/logo_sti_2.png') no-repeat;
+	background-position: 3px;
+	transition: all 0.2s ease-in-out;	
+}
+
+ .sidebar .sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    flex: 1; 
+}
+
+.sidebar:hover {
+    width: 155px;
+}
+
+.sidebar:hover > .sidebar-header {
+    background-position-x: 60px;
+	transition: all 0.2s ease-in-out;	
+}
+
+.sidebar-nav:hover > #navigationMenu span{
+    width:auto;
+	overflow:visible;
+	left:38px;
+}
+
+/*.sidebar:hover > .sidebar-nav > #navigationMenu a{
+	background-color: #185981;
+}*/
+
+#navigationMenu li{
+	/*float: left;*/
+	position:relative;
+	list-style:none;
+	height:30px;
+	padding:2px;
+	/*width:40px;*/
+}
+
+#navigationMenu span{
+	/* Container properties */
+	width:0;
+	left:15px;
+	padding-top:12px;
+	position:absolute;
+	overflow:hidden;
+
+	/* Text properties */
+	font-family: "Courier New", Courier, monospace;
+	font-size: 12px;
+	font-weight: bold;
+    color: #ebeef0;
+	/*letter-spacing:0.6px;
+	white-space:nowrap;
+	line-height:30px;*/
+	
+	/* CSS3 Transition: */
+	-webkit-transition: 0.25s;
+	
+	/* Future proofing (these do not work yet): */
+	-moz-transition: 0.25s;
+	transition: 0.25s;
+}
+
+.menu1{
+	height:30px;
+	width: 40px;
+	display:block;
+	position:relative;
+	border-left: 3px solid transparent;	
+}
+
+#navigationMenu a:hover span{ 
+	width:auto;
+	padding-left: 5px;
+}
+
+#navigationMenu:hover span{ 
+	left:38px;
+}
+
+#navigationMenu a:hover{
+	text-decoration:none;
+	border-left-color: #ffffff;
+	
+}
+
+#navigationMenu .virtualization span{
+	/*background-color:#7da315;
+	color:#3d4f0c;
+	text-shadow:1px 1px 0 #99bf31;*/
+}
+
+#navigationMenu .virtualization {	
+	background:url('../interface/icon_virtualization.png') no-repeat;
+	background-position: 3px;
+}
+#navigationMenu .virtualization:hover {	
+	width: 155px;
+	background:url('../interface/icon_virtualizationd.png') no-repeat;
+	background-position: 3px;
+	background-color: #0e354d;
+	-webkit-transition: 0.25s;
+}
+
+#navigationMenu .monitoring {	
+	background:url('../interface/icon_monitoring.png') no-repeat;
+	background-position: 3px;	
+}
+#navigationMenu .monitoring:hover {	
+	width: 155px;
+	background:url('../interface/icon_monitoringd.png') no-repeat;
+	background-position: 3px;
+	background-color: #0e354d;
+	-webkit-transition: 0.25s;
+}
+
+#navigationMenu .firewall {	
+	background:url('../interface/icon_firewall.png') no-repeat;
+	background-position: 3px;	
+}
+#navigationMenu .firewall:hover {	
+	width: 155px;	
+	background:url('../interface/icon_firewalld.png') no-repeat;
+	background-position: 3px;
+	background-color: #0e354d;
+	-webkit-transition: 0.25s;
+}
+
+#navigationMenu .documentation {	
+	background:url('../interface/icon_documentation.png') no-repeat;
+	background-position: 3px;	
+}
+#navigationMenu .documentation:hover {	
+	width: 155px;
+	background:url('../interface/icon_documentationd.png') no-repeat;
+	background-position: 3px;	
+	background-color: #0e354d;
+	-webkit-transition: 0.25s;
+}
+
+#navigationMenu .management {	
+	background:url('../interface/icon_management.png') no-repeat;
+	background-position: 3px;	
+}
+#navigationMenu .management:hover {	
+	width: 155px;	
+	background:url('../interface/icon_managementd.png') no-repeat;
+	background-position: 3px;
+	background-color: #0e354d;
+	-webkit-transition: 0.25s;
+}
+
+/**************************************************************************/
+
+ul li ul li{
+	background: #0a466a;
+	left:0px;
+	}
+
+	
+ul li ul li a{
+	align-items: center;
+	display: inherit;
+	left:5px;
+	position:absolute;
+	font-family: "Courier New", Courier, monospace;
+	font-size: 12px;
+	font-weight: bold;
+    color: #ebeef0;
+	-webkit-transition: 0.25s;
+	-moz-transition: 0.25s;
+	transition: 0.25s;
+	}
+
+
+ul li ul li a:hover{
+	background-position: 3px;
+	background: #0e354d;
+	-webkit-transition: 0.25s;
+}
+
+ul ul {
+	position: absolute;
+	top: 2px;
+	display:inline-block;
+	left:0px;
+	pointer-events: none;
+	opacity:0;
+	
+}
+
+ul ul li{white-space:nowrap;}
+
+ul ul a {
+    padding-top: 12px;
+	padding-left: 3px;
+	width: 95%;
+	text-decoration: none;
+}
+
+ul li:hover ul{
+	left:115px;
+	height: 100%;
+	opacity:.9;   
+	
+	-webkit-transition: 0.25s;	
+	pointer-events: all;
+}
+
+.content object{
+	position: absolute;
+    top: -5px;
+    left: 38px;
+    width: 98%;
+    height: 100vh;
+    border-width: 0px;
+    border: 0px;	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/************************************************************************************/
+/*#navigationMenu ul li {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+#navigationMenu li {position: relative;}
+
+#navigationMenu ul li {
+	position: absolute;
+	top: 0;
+	left: 150px;
+	width: 100%;
+}
+
+/*#navigationMenu li ul li a
+	{display: none;}
+	
+#navigationMenu  ul li:hover ul 
+{display: block;}*/
+
+/*.sidebar-nav a:hover > #navigationMenu li ul li a span{
+	display:block;
+	
+}
+
+#navigationMenu ul li span{
+	/* Container properties */
+/*	width:0;
+	left:15px;
+	padding-top:12px;
+	position:absolute;
+	overflow:hidden;
+
+	/* Text properties */
+/*	font-family: "Courier New", Courier, monospace;
+	font-size: 12px;
+	font-weight: bold;
+    color: #ebeef0;
+	/*letter-spacing:0.6px;
+	white-space:nowrap;
+	line-height:30px;*/
+	
+	/* CSS3 Transition: */
+/*	-webkit-transition: 0.25s;
+	
+	/* Future proofing (these do not work yet): */
+/*	-moz-transition: 0.25s;
+	transition: 0.25s;
+}
+
+/*#navigationMenu li a {
+	float: left;
+	padding: 4px;
+	margin-bottom: 5px;
+	margin-right: 10px;	
+}
+
+#navigationMenu ul li a {
+	display: inline;
+	padding: 0 6px 0 0;
+	float: none;
+	color: #999;
+	background: none;
+}*/

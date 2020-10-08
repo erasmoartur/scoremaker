@@ -52,11 +52,6 @@ body {
 	overflow:visible;
 	left:38px;
 }
-
-/*.sidebar:hover > .sidebar-nav > #navigationMenu a{
-	background-color: #185981;
-}*/
-
 #navigationMenu li{
 	/*float: left;*/
 	position:relative;
@@ -179,9 +174,6 @@ body {
 	background-color: #0e354d;
 	-webkit-transition: 0.25s;
 }
-
-/**************************************************************************/
-
 ul li ul li{
 	background: #0a466a;
 	left:0px;
@@ -246,102 +238,3 @@ ul li:hover ul{
     border-width: 0px;
     border: 0px;	
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/************************************************************************************/
-/*#navigationMenu ul li {
-	position: absolute;
-	top: 0;
-	left: 0;
-}
-
-#navigationMenu li {position: relative;}
-
-#navigationMenu ul li {
-	position: absolute;
-	top: 0;
-	left: 150px;
-	width: 100%;
-}
-
-/*#navigationMenu li ul li a
-	{display: none;}
-	
-#navigationMenu  ul li:hover ul 
-{display: block;}*/
-
-/*.sidebar-nav a:hover > #navigationMenu li ul li a span{
-	display:block;
-	
-}
-
-#navigationMenu ul li span{
-	/* Container properties */
-/*	width:0;
-	left:15px;
-	padding-top:12px;
-	position:absolute;
-	overflow:hidden;
-
-	/* Text properties */
-/*	font-family: "Courier New", Courier, monospace;
-	font-size: 12px;
-	font-weight: bold;
-    color: #ebeef0;
-	/*letter-spacing:0.6px;
-	white-space:nowrap;
-	line-height:30px;*/
-	
-	/* CSS3 Transition: */
-/*	-webkit-transition: 0.25s;
-	
-	/* Future proofing (these do not work yet): */
-/*	-moz-transition: 0.25s;
-	transition: 0.25s;
-}
-
-/*#navigationMenu li a {
-	float: left;
-	padding: 4px;
-	margin-bottom: 5px;
-	margin-right: 10px;	
-}
-
-#navigationMenu ul li a {
-	display: inline;
-	padding: 0 6px 0 0;
-	float: none;
-	color: #999;
-	background: none;
-}*/
